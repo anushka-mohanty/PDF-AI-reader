@@ -1,0 +1,32 @@
+name = "multimodal-rag"
+main = "src/worker.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Serve static assets from /public
+[site]
+bucket = "./public"
+
+# Cloudflare AI binding (free, built-in embeddings)
+[ai]
+binding = "AI"
+
+# R2 bucket for storing page images
+[[r2_buckets]]
+binding = "PAGES_BUCKET"
+bucket_name = "rag-pages"
+# preview_bucket_name = "rag-pages-dev"  # Uncomment after creating preview bucket
+
+# D1 SQLite database for metadata
+[[d1_databases]]
+binding = "DB"
+database_name = "rag-metadata"
+database_id = "REPLACE_WITH_YOUR_D1_ID"   # Run: wrangler d1 create rag-metadata
+
+# Vectorize index for semantic search (768 dims = bge-base-en-v1.5)
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "rag-index"
+
+# Secrets (set via: wrangler secret put GEMINI_API_KEY)
+# GEMINI_API_KEY - your Google AI Studio key

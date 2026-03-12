@@ -1,0 +1,15 @@
+{
+  "name": "multimodal-rag",
+  "version": "1.0.0",
+  "description": "Multimodal RAG system for searching study notes with AI",
+  "main": "src/worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "setup-db": "wrangler d1 execute rag-metadata --file=schema.sql",
+    "setup-db-remote": "wrangler d1 execute rag-metadata --remote --file=schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
