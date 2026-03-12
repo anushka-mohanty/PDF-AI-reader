@@ -11,11 +11,10 @@ bucket = "./public"
 [ai]
 binding = "AI"
 
-# R2 bucket for storing page images
-[[r2_buckets]]
+
+[[kv_namespaces]]
 binding = "PAGES_BUCKET"
-bucket_name = "rag-pages"
-# preview_bucket_name = "rag-pages-dev"  # Uncomment after creating preview bucket
+id = "PASTE_YOUR_KV_ID_HERE"
 
 # D1 SQLite database for metadata
 [[d1_databases]]
