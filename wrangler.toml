@@ -20,7 +20,7 @@ id = "rag-pages"
 [[d1_databases]]
 binding = "DB"
 database_name = "rag-metadata"
-database_id = "REPLACE_WITH_YOUR_D1_ID"   # Run: wrangler d1 create rag-metadata
+database_id = "b95b0da8-8e5f-46c8-9455-0a668aacfcb0"   # Run: wrangler d1 create rag-metadata
 
 # Vectorize index for semantic search (768 dims = bge-base-en-v1.5)
 [[vectorize]]
