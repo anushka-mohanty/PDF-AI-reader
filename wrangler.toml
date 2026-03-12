@@ -14,7 +14,7 @@ binding = "AI"
 
 [[kv_namespaces]]
 binding = "PAGES_BUCKET"
-id = "PASTE_YOUR_KV_ID_HERE"
+id = "rag-pages"
 
 # D1 SQLite database for metadata
 [[d1_databases]]
